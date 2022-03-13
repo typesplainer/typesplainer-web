@@ -9,6 +9,7 @@ editor = monaco.editor.create(document.getElementById("container"), {
   language: "python",
   wordWrap: "on",
   fontSize: 18,
+  automaticLayout: true,
 
   renderLineHighlight: false,
   fontLigatures: "'cv01', 'cv02', 'cv04', 'ss05', 'ss03', 'cv30'",

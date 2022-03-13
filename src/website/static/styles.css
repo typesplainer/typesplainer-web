@@ -149,6 +149,43 @@ a {
   -webkit-animation-fill-mode: forwards;
 }
 
+#container {
+  width: 50rem !important;
+  height: 35rem !important;
+}
+
+@media only screen and (max-width: 800px) {
+  #container {
+    width: 40rem !important;
+    height: 35rem !important;
+  }
+  .center .title {
+    font-size: 4em;
+  }
+  .center .description {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 667px) {
+  #container {
+    width: 30rem !important;
+    height: 35rem !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #container {
+    width: 20rem !important;
+    height: 30rem !important;
+  }
+  .center .title {
+    font-size: 3em;
+  }
+  .center .description {
+    font-size: 0.8em;
+  }
+}
+
 ::-moz-selection {
   /* Code for Firefox */
   background: #2c4260;
