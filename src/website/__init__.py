@@ -1,4 +1,5 @@
 from .app import app
 
-def get_app(*args, **kwargs):
+
+def get_app(environ, start_response):
     return app

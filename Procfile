@@ -1,1 +1,1 @@
-web: cd src;waitress-serve --port=$PORT website:get_app
+web: cd src;uwsgi uwsgi.ini
