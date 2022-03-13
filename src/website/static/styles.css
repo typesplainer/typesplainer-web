@@ -49,6 +49,13 @@ a {
 #container {
   width: 50rem !important;
   height: 35rem !important;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 15%);
+  overflow: hidden;
+  animation: slide-up 1s ease-out;
+  animation-fill-mode: forwards;
+  -webkit-animation: slide-up 1s ease-out;
+  -webkit-animation-fill-mode: forwards;
 }
 .monaco-editor {
   /* Padding for the border-radius */
@@ -90,7 +97,7 @@ a {
   box-sizing: border-box;
   transition: all 0.3s ease;
   opacity: 0;
-  margin-top: 3em;
+  margin-top: 1em;
   border: 1px solid #ba8ef7;
   border-radius: 6px;
   background: transparent;
@@ -98,7 +105,7 @@ a {
   padding: 16px 24px 16px;
   width: auto;
   animation: fade-in 1s ease-out;
-  animation-delay: 0.8s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
   text-align: center;
   color: #ba8ef7;
@@ -106,8 +113,6 @@ a {
     sans-serif;
   font-size: 1.1em;
   font-weight: 600;
-  -webkit-animation: fade-in 1s ease-out;
-  -webkit-animation-fill-mode: forwards;
 }
 .exit-animation {
   transition: all 0.3s ease;
