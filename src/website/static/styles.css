@@ -133,6 +133,22 @@ a {
   font-size: 1.1rem;
   font-weight: bold;
 }
+
+.footer-description{
+  opacity: 0;
+  margin-top: 10px;
+  animation: slide-down 1s ease-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  text-align: center;
+  color: #959da5;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  -webkit-animation: slide-down 1.2s ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
+
 ::-moz-selection {
   /* Code for Firefox */
   background: #2c4260;
