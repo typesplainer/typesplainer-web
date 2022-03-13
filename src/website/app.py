@@ -1,3 +1,4 @@
+import logging
 import os
 import re
 
@@ -10,6 +11,8 @@ from werkzeug.exceptions import HTTPException
 app = Flask(__name__)
 app.config["TRAP_HTTP_EXCEPTIONS"] = True
 app.cache = {}
+
+logging.basicConfig(level=logging.WARNING)
 
 @app.route("/")
 def index():
