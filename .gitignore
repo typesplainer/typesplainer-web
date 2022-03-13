@@ -151,5 +151,5 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-src/static/themes/*
-!src/static/themes/Copilot.json
+src/website/static/themes/*
+!src/website/static/themes/Copilot.json
