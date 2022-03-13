@@ -1,6 +1,6 @@
 import re
 
-from flask import Flask, send_from_directory, render_template, request
+from flask import Flask, send_from_directory, render_template, request, url_for
 from mypy.errors import CompileError
 from typesplainer import parse_code, get_json
 from werkzeug.exceptions import HTTPException
@@ -9,7 +9,7 @@ from werkzeug.exceptions import HTTPException
 app = Flask(__name__)
 app.config["TRAP_HTTP_EXCEPTIONS"] = True
 app.cache = {}
-
+app.add_url_rule('/favicon.ico', redirect_to=url_for('static', filename='favicon.ico'))
 
 @app.route("/")
 def index():
@@ -36,10 +36,10 @@ def typesplain():
         )
 
     if formatted_code in app.cache:
-        return render_template("typesplain.html", data=app.cache[formatted_code], re=re)
+        return render_template("typesplain.html", data=app.cache[formatted_code])
     type_defs = parse_code(formatted_code)
     try:
         typesplained_json = get_json(type_defs)
     except CompileError as e:
         return render_template("error.html", title="Compile Error", description=str(e))
-    return render_template("typesplain.html", data=typesplained_json, re=re)
+    return render_template("typesplain.html", data=typesplained_json)
