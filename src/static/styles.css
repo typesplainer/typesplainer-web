@@ -1,0 +1,154 @@
+body {
+  background-color: #1b1f24;
+}
+a {
+  color: #89ddff;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+@keyframes slide-up {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-down {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.github-corner {
+  opacity: 0;
+  animation: fade-in 1s ease-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  -webkit-animation: fade-in 1s ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
+#container {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 15%);
+  overflow: hidden;
+  animation: slide-up 1s ease-out;
+  animation-fill-mode: forwards;
+  -webkit-animation: slide-up 1s ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
+.monaco-editor {
+  /* Padding for the border-radius */
+  padding-top: 2em;
+}
+.center {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+}
+.center .title {
+  margin-bottom: 0;
+  animation: slide-down 1s ease-out;
+  animation-fill-mode: forwards;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.95);
+  font-family: "Raleway", sans-serif;
+  font-size: 6rem;
+  font-weight: 800;
+  -webkit-animation: slide-down 1s ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
+.center .description {
+  opacity: 0;
+  margin-top: 10px;
+  animation: slide-down 1s ease-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  text-align: center;
+  color: #959da5;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  -webkit-animation: slide-down 1s ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
+.center #typesplain {
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  opacity: 0;
+  margin-top: 1em;
+  border: 1px solid #ba8ef7;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  padding: 16px 24px 16px;
+  width: auto;
+  animation: fade-in 1s ease-out;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
+  text-align: center;
+  color: #ba8ef7;
+  font-family: "Fira Code,Cascadia Code,Menlo,Monaco,Consolas,Courier New",
+    sans-serif;
+  font-size: 1.1em;
+  font-weight: 600;
+  -webkit-animation: fade-in 1s ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
+.exit-animation {
+  transition: all 0.3s ease;
+  animation: fade-in 0.5s ease-out;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+  -webkit-animation: fade-in 0.5s ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
+.center #typesplain:hover {
+  /* color: #1b1f23;
+	*/
+  background: rgba(186, 142, 247, 0.1);
+}
+.center #typesplain i {
+  position: absolute;
+  margin-top: 2px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+::-moz-selection {
+  /* Code for Firefox */
+  background: #2c4260;
+}
+::-webkit-selection {
+  /* Code for Webkit */
+  background: #2c4260;
+}
+::-o-selection {
+  /* Code for Opera */
+  background: #2c4260;
+}
+::-ms-selection {
+  /* Code for Microsoft Edge */
+  background: #2c4260;
+}
+::selection {
+  background: #2c4260;
+}
