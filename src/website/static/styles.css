@@ -47,13 +47,8 @@ a {
   -webkit-animation-fill-mode: forwards;
 }
 #container {
-  border-radius: 10px;
-  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 15%);
-  overflow: hidden;
-  animation: slide-up 1s ease-out;
-  animation-fill-mode: forwards;
-  -webkit-animation: slide-up 1s ease-out;
-  -webkit-animation-fill-mode: forwards;
+  width: 50rem !important;
+  height: 35rem !important;
 }
 .monaco-editor {
   /* Padding for the border-radius */
@@ -123,8 +118,6 @@ a {
   -webkit-animation-fill-mode: forwards;
 }
 .center #typesplain:hover {
-  /* color: #1b1f23;
-	*/
   background: rgba(186, 142, 247, 0.1);
 }
 .center #typesplain i {
@@ -133,8 +126,7 @@ a {
   font-size: 1.1rem;
   font-weight: bold;
 }
-
-.footer-description{
+.footer-description {
   opacity: 0;
   margin-top: 10px;
   animation: slide-down 1s ease-out;
@@ -148,14 +140,9 @@ a {
   -webkit-animation: slide-down 1.2s ease-out;
   -webkit-animation-fill-mode: forwards;
 }
-
-#container {
-  width: 50rem !important;
-  height: 35rem !important;
-}
-
 @media only screen and (max-width: 800px) {
-  #container {
+  #container,
+  .center {
     width: 40rem !important;
     height: 35rem !important;
   }
@@ -167,14 +154,15 @@ a {
   }
 }
 @media only screen and (max-width: 667px) {
-  #container {
+  #container,
+  .center {
     width: 30rem !important;
     height: 35rem !important;
   }
 }
-
 @media only screen and (max-width: 480px) {
-  #container {
+  #container,
+  .center {
     width: 20rem !important;
     height: 30rem !important;
   }
@@ -185,7 +173,6 @@ a {
     font-size: 0.8em;
   }
 }
-
 ::-moz-selection {
   /* Code for Firefox */
   background: #2c4260;

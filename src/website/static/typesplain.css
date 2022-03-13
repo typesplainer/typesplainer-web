@@ -23,6 +23,7 @@ ul {
   animation-fill-mode: forwards;
   color: #eeeeee;
   font-family: "Railway", sans-serif;
+  overflow-wrap: break-word;
   -webkit-animation: fade-in 1s ease-out;
   -webkit-animation-fill-mode: forwards;
 }
