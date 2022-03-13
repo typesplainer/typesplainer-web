@@ -1,3 +1,4 @@
+import os
 import re
 
 from flask import Flask, send_from_directory, render_template, request, url_for
@@ -9,12 +10,18 @@ from werkzeug.exceptions import HTTPException
 app = Flask(__name__)
 app.config["TRAP_HTTP_EXCEPTIONS"] = True
 app.cache = {}
-app.add_url_rule('/favicon.ico', redirect_to=url_for('static', filename='favicon.ico'))
 
 @app.route("/")
 def index():
     return send_from_directory("static", "index.html")
 
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(
+        os.path.join(app.root_path, 'static'),
+        'favicon.ico',
+        mimetype='image/vnd.microsoft.icon'
+    )
 
 @app.errorhandler(HTTPException)
 def http_error_handler(error):
