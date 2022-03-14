@@ -15,7 +15,7 @@ Extremely simple. Clone the repo, Install the python packages `flask` and `types
 git clone https://github.com/wasi-master/typesplainer-web
 pip install flask
 pip install typesplainer
-cd src/website
+cd typesplainer-web/src/website
 flask run
 ```
 The requirements.txt file does have the dependency uwsgi but that's for production deployment, for personal use that's not necessary.
