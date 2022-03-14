@@ -5,7 +5,7 @@
 
 editor = monaco.editor.create(document.getElementById("container"), {
   value:
-    'from typing import *\n\nclass Text:\n    pass\n\ndef life(\n    f: Callable[str, Generator[int, str, bool]],\n    g: Awaitable[Sequence[Text]]\n) -> Dict[List[Set[FrozenSet[int]]], str]:\n    return {[{frozenset(42)}]: "Hello World!"}\n\nfromkeys: Callable[List[int], Dict[int, List[Union[Segment, None]]]]',
+    'from typing import *\n\nclass Text:\n  pass\n\ndef life(\n  f: Callable[[str, int], Generator[int, str, bool]],\n  g: Awaitable[Sequence[Text]]\n) -> Dict[List[Set[FrozenSet[int]]], str]:\n  return {[{frozenset(42)}]: "Hello World!"}\n\nfromkeys: Callable[[List[int]], Dict[int, List[Union[Segment, None]]]]',
   language: "python",
   wordWrap: "on",
   fontSize: 18,
