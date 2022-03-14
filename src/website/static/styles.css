@@ -48,7 +48,7 @@ a {
 }
 #container {
   width: 50rem !important;
-  height: 35rem !important;
+  height: 40vh !important;
   border-radius: 10px;
   box-shadow: 0 5px 10px 0 rgb(0 0 0 / 15%);
   overflow: hidden;
@@ -149,7 +149,6 @@ a {
   #container,
   .center {
     width: 40rem !important;
-    height: 35rem !important;
   }
   .center .title {
     font-size: 4em;
@@ -162,14 +161,12 @@ a {
   #container,
   .center {
     width: 30rem !important;
-    height: 35rem !important;
   }
 }
 @media only screen and (max-width: 480px) {
   #container,
   .center {
     width: 20rem !important;
-    height: 30rem !important;
   }
   .center .title {
     font-size: 3em;
