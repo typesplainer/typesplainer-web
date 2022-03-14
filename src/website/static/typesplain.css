@@ -11,6 +11,61 @@ ul {
   padding: 0;
   list-style-type: none;
 }
+
+.content{
+  max-width: fit-content;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.content .title {
+  margin-bottom: 0;
+  animation: slide-down 1s ease-out;
+  animation-fill-mode: forwards;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.95);
+  font-family: "Raleway", sans-serif;
+  font-size: 6rem;
+  font-weight: 800;
+  -webkit-animation: slide-down 1s ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
+.content .description {
+  opacity: 0;
+  margin-top: 10px;
+  animation: slide-down 1s ease-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  text-align: center;
+  color: #959da5;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  -webkit-animation: slide-down 1s ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
+.content #typesplain {
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  opacity: 0;
+  margin-top: 1em;
+  border: 1px solid #ba8ef7;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  padding: 16px 24px 16px;
+  width: auto;
+  animation: fade-in 1s ease-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  text-align: center;
+  color: #ba8ef7;
+  font-family: "Fira Code,Cascadia Code,Menlo,Monaco,Consolas,Courier New",
+    sans-serif;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
 .explanation-container {
   opacity: 0;
   margin: 10px;
@@ -36,4 +91,47 @@ ul {
   color: #aaaaaa;
   font-size: 1em;
   font-weight: 400;
+}
+
+@media only screen and (max-width: 1366px) {
+  .content .title {
+    font-size: 4em;
+  }
+  .explanation-container__title {
+    font-size: 1.5em;
+  }
+  .explanation-container__description{
+    font-size: 1em;
+  }
+  .content .description, {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .content .title {
+    font-size: 2.5em;
+  }
+  .explanation-container__title {
+    font-size: 1.2em;
+  }
+  .explanation-container__description {
+    font-size: 0.8em;
+  }
+  .content .description{
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .content .title {
+    font-size: 1.7em;
+  }
+  .explanation-container__title {
+    font-size: 1em;
+  }
+  .explanation-container__description {
+    font-size: 0.8em;
+  }
+  .content .description{
+    font-size: 0.8em;
+  }
 }
