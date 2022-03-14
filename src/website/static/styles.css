@@ -38,6 +38,14 @@ a {
     opacity: 1;
   }
 }
+@keyframes delayed-fade-in {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .github-corner {
   opacity: 0;
   animation: fade-in 1s ease-out;
@@ -49,17 +57,40 @@ a {
 #container {
   width: 50rem !important;
   height: 40vh !important;
-  border-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   box-shadow: 0 5px 10px 0 rgb(0 0 0 / 15%);
   overflow: hidden;
+  margin-top: 0;
   animation: slide-up 1s ease-out;
   animation-fill-mode: forwards;
   -webkit-animation: slide-up 1s ease-out;
   -webkit-animation-fill-mode: forwards;
 }
-.monaco-editor {
+.center #container-title{
+  margin-bottom: 0;
+  opacity: 0;
+  text-align: center;
+  color: #dddddd;
+  background-color: #20262a;
+  width: 100%;
+  font-family: "Fira Code,Cascadia Code,Menlo,Monaco,Consolas,Courier New",monospace;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  font-weight: 500;
+  animation: delayed-fade-in 1s ease-out;
+  animation-fill-mode: forwards;
+  -webkit-animation: delayed-fade-in 1s ease-out;
+  -webkit-animation-fill-mode: forwards;
   /* Padding for the border-radius */
-  padding-top: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.center #container-title small{
+  color: #8a939a;
+  font-family: "Fira Code,Cascadia Code,Menlo,Monaco,Consolas,Courier New",monospace;
+  font-weight: 300;
+  font-size: 12px;
 }
 .center {
   position: absolute;
@@ -109,18 +140,9 @@ a {
   animation-fill-mode: forwards;
   text-align: center;
   color: #ba8ef7;
-  font-family: "Fira Code,Cascadia Code,Menlo,Monaco,Consolas,Courier New",
-    sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 1.1em;
   font-weight: 600;
-}
-.exit-animation {
-  transition: all 0.3s ease;
-  animation: fade-in 0.5s ease-out;
-  animation-delay: 0.1s;
-  animation-fill-mode: forwards;
-  -webkit-animation: fade-in 0.5s ease-out;
-  -webkit-animation-fill-mode: forwards;
 }
 .center #typesplain:hover {
   background: rgba(186, 142, 247, 0.1);
