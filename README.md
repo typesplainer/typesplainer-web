@@ -10,7 +10,7 @@ Available [as a cli](https://pypi.org/project/typesplainer), [as a website](http
 
 ## To run locally
 
-Extremely simple. Clone the repo, Install the python packages `flask` and `typesplainer`, `cd src/website`, `flask run`. So basically
+Extremely simple. Clone the repo, Install the python packages `flask` and `typesplainer`, `cd typesplainer-web/src/website`, `flask run`. So basically
 ```sh
 git clone https://github.com/wasi-master/typesplainer-web
 pip install flask
