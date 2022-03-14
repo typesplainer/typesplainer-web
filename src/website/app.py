@@ -36,7 +36,15 @@ def http_error_handler(error):
 @app.route("/typesplain", methods=["POST"])
 def typesplain():
     code = request.form.get("code")
-    formatted_code = "\n".join(re.findall(r"'[^;]*'(?=;|$)|([^;]+)(?=;|$)", code))
+    code_lines = re.findall(r"'[^;]*'(?=;|$)|([^;]+)(?=;|$)", code)
+    formatted_code = "\n".join(code_lines)
+
+    if code.strip() == "import this":
+        return render_template(
+            "error.html",
+            title="The Zen of Python",
+            description='Beautiful is better than ugly.<br>Explicit is better than implicit.<br>Simple is better than complex.<br>Complex is better than complicated.<br>Flat is better than nested.<br>Sparse is better than dense.<br>Readability counts<br><small style=\"font-size: 0.6em;margin-top:0px\">(shortened)</small>',
+        )
 
     if len(formatted_code) > 5_242_880:
         return render_template(
