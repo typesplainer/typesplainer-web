@@ -1,14 +1,16 @@
-// The Monaco Editor can be easily created, given an
-// empty container and an options literal.
-// Two members of the literal are "value" and "language".
-// The editor takes the full size of its container.
-
+var fontSize = 18;
+if (matchMedia('only screen and (max-width: 667px)').matches) {
+  fontSize = 14;
+}
+if (matchMedia('only screen and (max-width: 480px)').matches) {
+  fontSize = 12;
+}
 editor = monaco.editor.create(document.getElementById("container"), {
   value:
     'from typing import *\n\nclass Text:\n  pass\n\ndef life(\n  f: Callable[[str, int], Generator[int, str, bool]],\n  g: Awaitable[Sequence[Text]]\n) -> Dict[List[Set[FrozenSet[int]]], str]:\n  return {[{frozenset(42)}]: "Hello World!"}\n\nfromkeys: Callable[[List[int]], Dict[int, List[Union[Segment, None]]]]',
   language: "python",
   wordWrap: "on",
-  fontSize: 18,
+  fontSize: fontSize,
   automaticLayout: true,
 
   renderLineHighlight: false,
