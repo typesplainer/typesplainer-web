@@ -1,3 +1,3 @@
-typesplainer==0.2.4
+typesplainer==0.2.6
 flask==2.0.3
 uwsgi==2.0.20
