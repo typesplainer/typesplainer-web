@@ -61,15 +61,36 @@ ul {
   text-align: center;
   color: #ba8ef7;
   font-family: "Fira Code,Cascadia Code,Menlo,Monaco,Consolas,Courier New",
-    sans-serif;
+  sans-serif;
   font-size: 1.1em;
   font-weight: 600;
 }
 
+.explanation-metadata{
+  margin-bottom: 0;
+  opacity: 0;
+  text-align: center;
+  color: #dddddd;
+  background-color: #20262a;
+  width: 100%;
+  box-shadow: 0 15px 10px 0 rgb(0 0 0 / 15%);
+  font-family: "Fira Code,Cascadia Code,Menlo,Monaco,Consolas,Courier New",monospace;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  font-weight: 500;
+  animation: fade-in 1s ease-out;
+  animation-fill-mode: forwards;
+  -webkit-animation: fade-in 1s ease-out;
+  -webkit-animation-fill-mode: forwards;
+  /* Padding for the border-radius */
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
 .explanation-container {
   opacity: 0;
-  margin: 10px;
-  border-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   background: #232a2f;
   padding: 2px 20px 5px 20px;
@@ -93,6 +114,7 @@ ul {
   font-weight: 400;
 }
 
+
 @media only screen and (max-width: 1366px) {
   .content .title {
     font-size: 4em;
@@ -103,7 +125,7 @@ ul {
   .explanation-container__description{
     font-size: 1em;
   }
-  .content .description, {
+  .content .description {
     font-size: 1em;
   }
 }
@@ -120,6 +142,9 @@ ul {
   .content .description{
     font-size: 1em;
   }
+  .explanation-metadata{
+    font-size: 0.8em;
+  }
 }
 @media only screen and (max-width: 480px) {
   .content .title {
@@ -133,5 +158,8 @@ ul {
   }
   .content .description{
     font-size: 0.8em;
+  }
+  .explanation-metadata{
+    font-size: 0.5em;
   }
 }

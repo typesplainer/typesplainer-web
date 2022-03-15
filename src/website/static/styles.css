@@ -1,11 +1,11 @@
+:root {
+  color-scheme: dark;
+}
 body {
   background-color: #1b1f24;
 }
 a {
   color: #89ddff;
-}
-::-webkit-scrollbar {
-  display: none;
 }
 @keyframes slide-up {
   0% {
@@ -66,6 +66,9 @@ a {
   animation-fill-mode: forwards;
   -webkit-animation: slide-up 1s ease-out;
   -webkit-animation-fill-mode: forwards;
+}
+textarea#hidden-code {
+  display: none !important;
 }
 .center #container-title{
   margin-bottom: 0;

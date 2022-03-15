@@ -198,6 +198,9 @@
       <ul>
         {% for def_ in data %}
         <li>
+          <p class="explanation-metadata">
+            line {{ def_["line"] }} column {{ def_["column"] }} to {{ def_["end_column"]}}
+          </p>
           <div class="explanation-container">
             <p class="explanation-container__title">
               {{ def_["typehint_text"] }}
