@@ -53,16 +53,15 @@ form = document.getElementById("typesplain-form");
 action_button.addEventListener("click", (e) => {
   e.preventDefault();
 
-  if (document.getElementById("code") === null) {
-    const hiddenCodeInput = document.createElement("input");
-    hiddenCodeInput.type = "hidden";
-    hiddenCodeInput.id = "code";
+  if (document.getElementById("hidden-code") === null) {
+    const hiddenCodeInput = document.createElement("textarea");
+    hiddenCodeInput.id = "hidden-code";
     hiddenCodeInput.name = "code";
-    hiddenCodeInput.value = editor.getValue().replaceAll("\n", ";");
+    hiddenCodeInput.value = editor.getValue();
     form.appendChild(hiddenCodeInput);
   } else {
-    const hiddenCodeInput = document.getElementById("code");
-    hiddenCodeInput.value = editor.getValue().replaceAll("\n", ";");
+    const hiddenCodeInput = document.getElementById("hidden-code");
+    hiddenCodeInput.value = editor.getValue();
   }
   form.submit();
   return false;
