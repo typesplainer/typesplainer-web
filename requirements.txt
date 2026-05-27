@@ -1,3 +1,4 @@
 typesplainer==0.2.6
 flask==2.0.3
+mypy<1.8
 Werkzeug<3
