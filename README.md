@@ -10,12 +10,11 @@ Available [as a cli](https://pypi.org/project/typesplainer), [as a website](http
 
 ## To run locally
 
-Extremely simple. Clone the repo, Install the python packages [`flask`](https://pypi.org/project/flask) and [`typesplainer`](https://pypi.org/project/typesplainer), `cd typesplainer-web/src/website`, `flask run`. So basically
+Extremely simple. Clone the repo, install the dependencies from `requirements.txt`, `cd typesplainer-web/src/website`, `flask run`. So basically
 ```sh
 git clone https://github.com/wasi-master/typesplainer-web
-pip install flask
-pip install typesplainer
+pip install -r requirements.txt
 cd typesplainer-web/src/website
 flask run
 ```
-The requirements.txt file does have the dependency uwsgi but that's for production deployment, for personal use that's not necessary.
+Production deployment on Vercel uses the Flask app through `api/index.py` and `vercel.json`, not `uWSGI`.

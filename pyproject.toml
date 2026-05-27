@@ -12,8 +12,5 @@ license = { text = "MIT" }
 dependencies = [
     "typesplainer==0.2.6",
     "flask==2.0.3",
-    "uwsgi==2.0.20",
+    "Werkzeug<3",
 ]
-
-[tool.vercel]
-entrypoint = "src.website.__init__:app"

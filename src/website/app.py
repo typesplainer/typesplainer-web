@@ -20,7 +20,7 @@ if get_debug_flag():
 
 @app.route("/")
 def index():
-    return send_from_directory("static", "index.html")
+    return send_from_directory(os.path.join(app.root_path, "static"), "index.html")
 
 @app.route('/favicon.ico')
 def favicon():
