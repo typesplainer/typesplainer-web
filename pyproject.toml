@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "typesplainer-web"
+version = "0.1.0"
+description = "Web frontend for Typesplainer"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+dependencies = [
+    "typesplainer==0.2.6",
+    "flask==2.0.3",
+    "uwsgi==2.0.20",
+]
+
+[tool.vercel]
+entrypoint = "src.website.__init__:app"
